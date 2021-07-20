@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- use device width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- include styles -->
+  <!-- Bootstrap styles -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!-- Title -->
+  <title>DSEPREP</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand">DSEPREP</a>
+    <form class="form-inline">
+      <select class="form-select" aria-label="subject-select">
+        <option value="1" selected>英文</option>
+        <option value="2">數學</option>
+        <option value="3">經濟</option>
+        <option value="4">企會財</option>
+        <option value="5">物理</option>
+        <option value="5">化學</option>
+      </select>    
+    </form>
+    <form class="form-inline">
+      <span class="passwordFail text-danger" hidden>電郵/密碼錯誤</span>
+      <input class="form-control mr-sm-2" type="email" placeholder="電郵" aria-label="Search">
+      <input class="form-control mr-sm-2" type="password" placeholder="密碼" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0 loginFormButton" type="submit">登入</button>
+    </form>
+  </nav>
+
+  <div class="videoBox text-center">
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="brief.mp4" type="video/mp4">
+    </video>
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-25"></div>
+        <div class="w-50 text-white bg-dark text-center">
+          <h1 class="display-4">DSEPREP 教學資源</h1>
+          <p class="lead">免費網上學習短片，助你邁上大學之路</p>
+          <!-- navbar -->
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" data-toggle="modal" data-target="#loginModal" href="#">重點 Concept</a>
+            <a class="nav-link" data-toggle="modal" data-target="#loginModal" href="#">Pastpaper 解構</a>
+            <a class="nav-link" data-toggle="modal" data-target="#loginModal" href="#">JUPAS 攻略</a>
+            <a class="nav-link" data-toggle="modal" data-target="#loginModal" href="#">最後一分鐘衝刺</a>
+          </nav>
+        </div>
+        <div class="w-25"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">登入</h5>
+        </div>
+        <div class="modal-body">
+          <form class="form-inline">
+            <span class="passwordFail text-danger" hidden>電郵/密碼錯誤</span>
+            <input class="form-control mr-sm-2" type="email" placeholder="電郵" aria-label="email">
+            <input class="form-control mr-sm-2" type="password" placeholder="密碼" aria-label="password">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary loginFormButton">登入</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS libraries -->
+  <!-- handlebars -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"
+    integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw=="
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script>
+
+</body>
+<script>
+  $(".loginFormButton").click(function(){
+    $(".passwordFail").removeAttr("hidden");
+  });
+</script>
+</html>
+
+<!-- Template obtained from https://startbootstrap.com/snippets/video-header/ -->
+<!-- MIT License -->
